@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Todo-aholic</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    
+    
+	<div class = "bgimg" ng-controller="toDoController" ng-app="toDoApp">
+	<div class = "overlay"></div>
+	
+	<!----------Navbar--------------->
+    	<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#"><img src="Images/ToDo.png" class="img logo img-responsive"></a>
+			</div>
+			<ul class = "nav navbar-nav navbar-right">
+				<li><a href="#" class="to">Today</a></li>
+				<li><a href="#" class = "con">Completed Taks</a></li>
+				<li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Sign out</a></li>
+			</ul>
+		  </div>
+		</nav>
+	<!--------Navbar end------------->
+	
+	<!--------Todo Container starts------------->
+        <div class="todo-wrapper text-center" >		
+			<h4 class="total-items">Total todos : {{totalToDo()}}</h4>
+			<div class="todo text-left">
+				  <ul class="nav listIt" >
+					<li ng-repeat="todo in todos">
+					  <input type="checkbox" ng-model="todo.done"/>
+					  <span class="todo-{{todo.done}}">{{todo.text}}</span>
+					</li>
+				  </ul>
+				  <input type="text" Placeholder="Enter Task" ng-model="input"/>
+				  <p class="error">{{error}}</p>
+				  <a href="" class="btn btn-success" ng-click="addToDo()"> Add New Task</a>
+				  <a href="#" class="btn btn-danger" ng-click="clearCompleted()">Delete Selected</a>
+			</div>
+		</div>
+	</div>
+	
+	<!--------Completed Tasks------------->
+		<div class = "complete">
+						<span class="pull-right cross">&#10005;</span>
+						<h3 class = "text-center">COMPLETED TASKS</h3>
+		</div>
+	  
+	<!--------Scripts------------->  
+	
+	  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js'></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  <script src="js/angular.js"></script>
+	  <script src="js/index.js"></script>
+
+	</body>
+	</html>
+	 

@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-----styles-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body>
+
+<!--------Background------------->
+<div class = "bg">
+	<div class = "overlay"></div>
+	
+<!--------Navbar------------->
+		<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="#"><img src="Images/ToDo.png" class="img logo img-responsive"></a>
+				</div>
+				<ul class = "nav navbar-nav navbar-right">
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Business</a></li>
+					<li><a href="#">Premium</a></li>
+					<li><a href="#">Our App</a></li>
+					<li><a href="#">Blog</a></li>
+				</ul>
+			  </div>
+		</nav>
+		
+<!--------Login/Sign up container------------->
+		<div class = "row contain">
+		  <div class = "container-fluid">
+			<div class = "col-xs-12 col-sm-12 col-md-8 col-lg-8">
+				<div class = "about_us">
+				  <div class = "content">
+					<h3>Accomplish More,<h3>
+					<h4>Everyday.</h4>
+					<p>Millions of people rely on ToDo-aholic to get things done.<br>
+					Manage tasks and projects anywhere with Todoist. At home. At school. At work. Online. Offline. And across 10+ platforms.</p>
+					<button type="button">Explore Us</button>&nbsp;&nbsp;<span>&#187;</span>
+				  </div>
+				</div>
+			</div>
+			
+			<div class = "col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<form class="signUp" class = "pull-right">
+					<h3 class = "text-center">Welcome Aboard!</h3>
+					<input class="w100" type="email" placeholder="Email" reqired autocomplete='off' />
+					<input type="password" placeholder="Password" required />
+					<input type="password" placeholder="Verify Password" required />
+					<button class="form-btn sx log-in" type="button">Log In</button>
+					<button class="form-btn dx" type="submit">Sign Up</button>
+				</form>
+				
+				<form class="signIn">
+					<h3 class = "text-center">Welcome</br>Back !</h3>
+					<input type="email" placeholder="Email" autocomplete='off' required />
+					<input type="password" placeholder="Password" required />
+					<button class="form-btn sx back" type="button">Back</button>
+					<button class="form-btn dx" type="submit">Log In</button>
+				</form>
+			</div>
+		  </div>
+		</div>
+</div>
+
+<!--------Scripts------------->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>
